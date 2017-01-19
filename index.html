@@ -9,12 +9,14 @@
 		let canvas = document.querySelector("#c");
 		let context = canvas.getContext("2d");
 		console.log(context);
-		let image = new Image();
-		image.src = "https://2.bp.blogspot.com/-3I9STecZVjA/TzG6jEfWCGI/AAAAAAAAfKQ/JSLV2yzPHJQ/s1600/VUDU.jpg";
-		image.onload = function(){
-			context.drawImage(this, 0, 0, canvas.width, canvas.height);
-			
-		}
+		
+		function createImage(){
+			let image = new Image();
+			image.src = "https://2.bp.blogspot.com/-3I9STecZVjA/TzG6jEfWCGI/AAAAAAAAfKQ/JSLV2yzPHJQ/s1600/VUDU.jpg";
+			image.onload = function(){
+				context.drawImage(this, 0, 0, canvas.width, canvas.height);
+			}
+		}	
 
 		function saveImage(image){
 			window.open(image.toDataURL());
