@@ -8,17 +8,22 @@
 	<script>
 		let canvas = document.querySelector("#c");
 		let context = canvas.getContext("2d");
-		console.log(context);
 		
-		context.fillRect(100,100,100,100);
-		context.strokeRect(50,50,50,50);
-
 		function createImage(){
 			let image = new Image();
 			image.src = "https://2.bp.blogspot.com/-3I9STecZVjA/TzG6jEfWCGI/AAAAAAAAfKQ/JSLV2yzPHJQ/s1600/VUDU.jpg";
 			image.onload = function(){
 				context.drawImage(this, 0, 0, canvas.width, canvas.height);
 			}
+		}
+
+		function utilsCanvas(){
+			//preencher com cor azul
+			context.fillStyle = "blue";
+			context.fillRect(100,100,100,100);
+			context.strokeRect(50,50,50,50);
+			//limpar
+			context.clearRect(50,50,75,75);
 		}	
 
 		function saveImage(image){
