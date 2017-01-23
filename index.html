@@ -17,18 +17,46 @@
 			}
 		}
 
-		function utilsCanvas(){
+		function drawWithCanvas(){
 			//preencher com cor azul
 			context.fillStyle = "blue";
 			context.fillRect(100,100,100,100);
 			context.strokeRect(50,50,50,50);
 			//limpar
-			context.clearRect(50,50,75,75);
-		}	
+			//context.clearRect(50,50,75,75);
+		};
+
+		function drawWithCanvas2(ctx){
+			ctx.beginPath();
+			ctx.moveTo(10,10);
+			ctx.lineTo(50,50);
+			ctx.lineTo(50,10);
+			ctx.lineTo(10,10);
+			ctx.fill();
+			
+			ctx.beginPath();
+			ctx.moveTo(50,50);
+			ctx.lineTo(50,150);
+			ctx.lineTo(150,150);
+			ctx.lineTo(150,50);
+			ctx.lineTo(50,50);
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.moveTo(75,75);
+			ctx.lineTo(75,75);
+			ctx.lineTo(125,75);
+			ctx.lineTo(125,125);
+			ctx.lineTo(75,75);
+			ctx.fill();
+		}
+
+		drawWithCanvas2(context);
 
 		function saveImage(image){
 			window.open(image.toDataURL());
 		}
+
 	</script>
 </body>
 </html>
