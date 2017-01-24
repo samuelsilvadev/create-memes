@@ -17,6 +17,10 @@
 			}
 		}
 
+		function createtextInImage(ctx, text, x, y){
+			ctx.strokeText(text,x,y);
+		}
+
 		function saveImage(image){
 			window.open(image.toDataURL());
 		}
