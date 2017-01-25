@@ -2,18 +2,31 @@
 <html>
 <head>
 	<title></title>
+	<form>
+		<label>Frase</label>
+		<input type="text" name="frase">
+
+		<label>Ponto X</label>
+		<input type="number" name="x">
+
+		<label>Ponto Y</label>
+		<input type="number" name="y">
+		<button>Inserir</button>
+	</form>
 </head>
 <body>
-	<canvas id="c"></canvas>
+	<canvas id="c" style="width:400px; height: 300px;"></canvas>
 	<script>
 		let canvas = document.querySelector("#c");
 		let context = canvas.getContext("2d");
 		
-		function createImage(){
+		createImage();
+
+		function createImage(callback){
 			let image = new Image();
 			image.src = "https://2.bp.blogspot.com/-3I9STecZVjA/TzG6jEfWCGI/AAAAAAAAfKQ/JSLV2yzPHJQ/s1600/VUDU.jpg";
 			image.onload = function(){
-				context.drawImage(this, 0, 0, canvas.width, canvas.height);
+				context.drawImage(this, 0, 0, canvas.width, canvas.height);				
 			}
 		}
 
