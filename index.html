@@ -4,14 +4,14 @@
 	<title></title>
 	<form>
 		<label>Frase</label>
-		<input type="text" name="frase">
+		<input id="frase" type="text" name="frase">
 
 		<label>Ponto X</label>
-		<input type="number" name="x">
+		<input id="x" type="number" name="x">
 
 		<label>Ponto Y</label>
-		<input type="number" name="y">
-		<button>Inserir</button>
+		<input id="y" type="number" name="y">
+		<button id="inserirFrase">Inserir</button>
 	</form>
 </head>
 <body>
@@ -20,6 +20,11 @@
 		let canvas = document.querySelector("#c");
 		let context = canvas.getContext("2d");
 		
+		document.querySelector("#inserirFrase").addEventListener("click", function(e){
+			e.preventDefault();
+			createtextInImage(context);
+		});
+
 		createImage();
 
 		function createImage(callback){
@@ -30,8 +35,10 @@
 			}
 		}
 
-		function createtextInImage(ctx, text, x, y){
-			ctx.strokeText(text,x,y);
+		function createtextInImage(ctx){
+			ctx.strokeText(document.querySelector("#frase").value, 
+							document.querySelector("#x").value,
+							document.querySelector("#y").value);
 		}
 
 		function saveImage(image){
