@@ -5,6 +5,7 @@
 	<form>
 		<label>Link de Imagem</label>
 		<input id="linkImagem" type="text" name="linkImagem">
+		<button id="carregarImagem">Carregar</button>
 	</form>
 	<form>
 		<label>Frase</label>
@@ -26,21 +27,27 @@
 		
 		document.querySelector("#inserirFrase").addEventListener("click", function(e){
 			e.preventDefault();
-			createtextInImage(context);
+			createtextInImage();
 		});
+
+		/*document.querySelector("#carregarImagem").addEventListener("click", function(e){
+			e.preventDefault();
+			createImage(document.querySelector("#frase").value);
+		});*/
 
 		createImage();
 
-		function createImage(callback){
+		//https://2.bp.blogspot.com/-3I9STecZVjA/TzG6jEfWCGI/AAAAAAAAfKQ/JSLV2yzPHJQ/s1600/VUDU.jpg
+		function createImage(src){
 			let image = new Image();
-			image.src = "https://2.bp.blogspot.com/-3I9STecZVjA/TzG6jEfWCGI/AAAAAAAAfKQ/JSLV2yzPHJQ/s1600/VUDU.jpg";
+			image.src = src;
 			image.onload = function(){
 				context.drawImage(this, 0, 0, canvas.width, canvas.height);				
 			}
 		}
 
-		function createtextInImage(ctx){
-			ctx.strokeText(document.querySelector("#frase").value, 
+		function createtextInImage(){
+			context.strokeText(document.querySelector("#frase").value, 
 							document.querySelector("#x").value,
 							document.querySelector("#y").value);
 		}
