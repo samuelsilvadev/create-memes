@@ -1,0 +1,13 @@
+body{
+	background-color: #1f9bc9;
+}
+
+form > label{
+	color:#fff;
+}
+
+section{
+	width: 100%;
+	min-height: 10%;
+	margin: 10px;
+}
