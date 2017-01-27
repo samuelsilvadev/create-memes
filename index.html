@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>	
+	<title>Create Memes</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
-<body style="background-color: #1f9bc9;">
-	<canvas id="c"></canvas>
-	<form>
-		<label>Link de Imagem</label>
-		<input id="linkImagem" type="text" name="linkImagem">
-		<button id="carregarImagem">Carregar</button>
-	</form>
-	<form>
-		<label>Frase</label>
-		<input id="frase" type="text" name="frase">
+<body>
+	<section>
+		<form>
+			<label>Link de Imagem</label>
+			<input id="linkImagem" type="text" name="linkImagem">
+			<button id="carregarImagem">Carregar</button>
+		</form>
+	</section>
+	<canvas id="c"></canvas>	
+	<section>
+		<form>
+			<label>Frase</label>
+			<input id="frase" type="text" name="frase">
 
-		<label>Ponto X</label>
-		<input id="x" type="number" name="x">
+			<label>Ponto X</label>
+			<input id="x" type="number" name="x">
 
-		<label>Ponto Y</label>
-		<input id="y" type="number" name="y">
-		<button id="inserirFrase">Inserir</button>
-	</form>
+			<label>Ponto Y</label>
+			<input id="y" type="number" name="y">
+			<button id="inserirFrase">Inserir</button>
+		</form>
+	</section>
 	<script>
 		let canvas = document.querySelector("#c");
 		let context = canvas.getContext("2d");
@@ -53,7 +58,6 @@
 		function saveImage(image){
 			window.open(image.toDataURL());
 		}
-
 	</script>
 </body>
 </html>
