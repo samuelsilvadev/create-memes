@@ -1,0 +1,17 @@
+{
+  "name": "create-memes",
+  "homepage": "https://github.com/samuelsilvadev/create-memes",
+  "description": "app to create a meme",
+  "main": "",
+  "authors": [
+    "Samuel Silva"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
