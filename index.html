@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title></title>	
+</head>
+<body style="background-color: #1f9bc9;">
+	<canvas id="c"></canvas>
 	<form>
 		<label>Link de Imagem</label>
 		<input id="linkImagem" type="text" name="linkImagem">
@@ -18,9 +21,6 @@
 		<input id="y" type="number" name="y">
 		<button id="inserirFrase">Inserir</button>
 	</form>
-</head>
-<body>
-	<canvas id="c"></canvas>
 	<script>
 		let canvas = document.querySelector("#c");
 		let context = canvas.getContext("2d");
