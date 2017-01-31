@@ -11,3 +11,7 @@ section{
 	min-height: 10%;
 	margin: 10px;
 }
+
+#btnFazerUpload, #btnInserirLink{
+	width: 100%;
+}
