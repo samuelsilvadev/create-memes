@@ -55,5 +55,10 @@ function createImage(src){
 function uploadImage(evt) {
 	console.log(evt);
 	console.log(evt.target);
-	var file = document.querySelector("#uploadImagem");
+	let file = document.querySelector("#uploadImagem").files[0];
+	let reader = new FileReader();
+	reader.onload = function(fileObject) {
+		createImage(fileObject.target.result);		
+	};
+	reader.readAsDataURL(file);
 }
