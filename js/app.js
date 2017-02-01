@@ -21,6 +21,14 @@ function createImage(src){
 	}
 }
 
+document.querySelector("#btnCarregarImagemUpload").addEventListener("click", function(e){
+	e.preventDefault();	
+});
+
+document.querySelector("#btnCarregarImagem").addEventListener("click", function(e){
+	e.preventDefault();	
+});
+
 function createtextInImage(){
 	context.strokeText(document.querySelector("#frase").value, 
 					document.querySelector("#x").value,
@@ -30,3 +38,4 @@ function createtextInImage(){
 function saveImage(image){
 	window.open(image.toDataURL());
 }
+
