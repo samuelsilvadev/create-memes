@@ -22,7 +22,8 @@ function createImage(src){
 }
 
 document.querySelector("#btnFazerUpload").addEventListener("click", function(e){
-	e.preventDefault();	
+	e.preventDefault();
+	document.querySelector("#frmUploadImagem").style.display = "block";
 });
 
 document.querySelector("#btnInserirLink").addEventListener("click", function(e){
