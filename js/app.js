@@ -7,6 +7,11 @@ document.querySelector("#inserirFrase").addEventListener("click", function(e){
 	createtextInImage();
 });
 
+document.querySelector("#btnCarregarImagemUpload").addEventListener("click", function(e){
+	e.preventDefault();
+	uploadImage(e);
+});
+
 document.querySelector("#btnCarregarImagem").addEventListener("click", function(e){
 	e.preventDefault();
 	createImage(document.querySelector("#linkImagem").value);
@@ -45,4 +50,10 @@ function createImage(src){
 	image.onload = function(){
 		context.drawImage(this, 0, 0, canvas.width, canvas.height);				
 	}
+}
+
+function uploadImage(evt) {
+	console.log(evt);
+	console.log(evt.target);
+	var file = document.querySelector("#uploadImagem");
 }
