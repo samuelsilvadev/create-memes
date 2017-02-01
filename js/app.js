@@ -14,15 +14,20 @@ document.querySelector("#btnCarregarImagem").addEventListener("click", function(
 
 document.querySelector("#btnFazerUpload").addEventListener("click", function(e){
 	e.preventDefault();
+	hideForms();
 	document.querySelector("#frmUploadImagem").style.display = "block";
 });
 
 document.querySelector("#btnInserirLink").addEventListener("click", function(e){
 	e.preventDefault();	
+	hideForms();
 	document.querySelector("#frmLinkImagem").style.display = "block";
 });
 
-function hideForms(){}
+function hideForms(){
+	document.querySelector("#frmUploadImagem").style.display = "none";
+	document.querySelector("#frmLinkImagem").style.display = "none";
+}
 
 function createtextInImage(){
 	context.strokeText(document.querySelector("#frase").value, 
