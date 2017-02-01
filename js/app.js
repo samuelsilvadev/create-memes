@@ -21,11 +21,11 @@ function createImage(src){
 	}
 }
 
-document.querySelector("#btnCarregarImagemUpload").addEventListener("click", function(e){
+document.querySelector("#btnFazerUpload").addEventListener("click", function(e){
 	e.preventDefault();	
 });
 
-document.querySelector("#btnCarregarImagem").addEventListener("click", function(e){
+document.querySelector("#btnInserirLink").addEventListener("click", function(e){
 	e.preventDefault();	
 });
 
