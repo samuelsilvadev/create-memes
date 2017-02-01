@@ -15,3 +15,7 @@ section{
 #btnFazerUpload, #btnInserirLink{
 	width: 100%;
 }
+
+#frmUploadImagem, #frmLinkImagem{
+	display: none;
+}
