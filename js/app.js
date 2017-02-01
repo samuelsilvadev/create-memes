@@ -28,6 +28,7 @@ document.querySelector("#btnFazerUpload").addEventListener("click", function(e){
 
 document.querySelector("#btnInserirLink").addEventListener("click", function(e){
 	e.preventDefault();	
+	document.querySelector("#frmLinkImagem").style.display = "block";
 });
 
 function createtextInImage(){
