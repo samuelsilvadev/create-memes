@@ -7,7 +7,7 @@ document.querySelector("#inserirFrase").addEventListener("click", function(e){
 	createtextInImage();
 });
 
-document.querySelector("#carregarImagem").addEventListener("click", function(e){
+document.querySelector("#btnCarregarImagem").addEventListener("click", function(e){
 	e.preventDefault();
 	createImage(document.querySelector("#linkImagem").value);
 });
