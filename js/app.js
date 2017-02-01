@@ -48,6 +48,8 @@ function createImage(src){
 	let image = new Image();
 	image.src = src;
 	image.onload = function(){
+		canvas.width = image.width;
+		canvas.height = image.height;
 		context.drawImage(this, 0, 0, canvas.width, canvas.height);				
 	}
 }
