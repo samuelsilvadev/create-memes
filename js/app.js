@@ -12,15 +12,6 @@ document.querySelector("#btnCarregarImagem").addEventListener("click", function(
 	createImage(document.querySelector("#linkImagem").value);
 });
 
-//https://2.bp.blogspot.com/-3I9STecZVjA/TzG6jEfWCGI/AAAAAAAAfKQ/JSLV2yzPHJQ/s1600/VUDU.jpg
-function createImage(src){
-	let image = new Image();
-	image.src = src;
-	image.onload = function(){
-		context.drawImage(this, 0, 0, canvas.width, canvas.height);				
-	}
-}
-
 document.querySelector("#btnFazerUpload").addEventListener("click", function(e){
 	e.preventDefault();
 	document.querySelector("#frmUploadImagem").style.display = "block";
@@ -30,6 +21,8 @@ document.querySelector("#btnInserirLink").addEventListener("click", function(e){
 	e.preventDefault();	
 	document.querySelector("#frmLinkImagem").style.display = "block";
 });
+
+function hideForms(){}
 
 function createtextInImage(){
 	context.strokeText(document.querySelector("#frase").value, 
@@ -41,3 +34,10 @@ function saveImage(image){
 	window.open(image.toDataURL());
 }
 
+function createImage(src){
+	let image = new Image();
+	image.src = src;
+	image.onload = function(){
+		context.drawImage(this, 0, 0, canvas.width, canvas.height);				
+	}
+}
