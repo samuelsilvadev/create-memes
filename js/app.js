@@ -35,7 +35,9 @@ function hideForms(){
 }
 
 function createtextInImage(){
-	context.strokeText(document.querySelector("#frase").value, 
+	context.fillStyle = 'white';
+	context.font="48px Georgia";
+	context.fillText(document.querySelector("#frase").value, 
 					document.querySelector("#x").value,
 					document.querySelector("#y").value);
 }
